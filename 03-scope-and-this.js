@@ -22,7 +22,7 @@
                 // shared functions - perhaps by defining a new inner function
 
 
-
+                /*
                 function UserCreator(name, score){
                     this.name = name;
                     this.score = score;
@@ -43,11 +43,11 @@
 
 
 
-                   const user1 = new UserCreator(“Eva”, 9)
+                   const user1 = new UserCreator("Eva", 9)
                    user1.increment()
 
                    console.log(user1);
-
+                   */
 
 
 
@@ -55,6 +55,7 @@
                 //    We need to introduce arrow functions - which bind this
                 //    lexically
 
+                   /*
                    function UserCreator(name, score){
                     this.name = name;
                     this.score = score;
@@ -70,5 +71,32 @@
                    };
 
 
-                   const users1 = new UserCreator(“Eva”, 9)
-                   user1.increment()
+                   const users1 = new UserCreator("Eva", 9)
+                   console.log(user1.increment());
+                    console.log(user1);
+                   */
+
+
+
+                    // The class ‘syntactic sugar’
+
+                class userCreator{
+                    constructor(name, score){
+                        this.name = name;
+                        this.score = score;
+                    }
+                
+
+                increment (){
+                    this.score++;
+                }
+                login(){
+                    console.log(`${this.name} has logged in.`);
+                }
+            }
+                const users = new userCreator("Eva",2);
+
+                console.log(users.increment());
+                console.log(users);
+                
+
